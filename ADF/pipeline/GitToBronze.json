@@ -34,7 +34,7 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "Dynamic copy",
 				"type": "ForEach",
 				"dependsOn": [
 					{
