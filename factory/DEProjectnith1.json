@@ -1,9 +1,0 @@
-{
-	"name": "DEProjectnith1",
-	"location": "eastus2",
-	"identity": {
-		"type": "SystemAssigned",
-		"principalId": "c41e58dc-5e9b-4e29-9873-80784f8ea9ba",
-		"tenantId": "0229b1ab-c51b-4092-a8bc-85b46c52631a"
-	}
-}
