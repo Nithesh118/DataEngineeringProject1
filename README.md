@@ -7,6 +7,7 @@ This project demonstrates an end-to-end data engineering pipeline built using Az
 <img width="1908" height="866" alt="Screenshot 2026-03-30 223024" src="https://github.com/user-attachments/assets/8f57c5a9-27f8-43b8-867e-5e58ca5dc42b" />
 <img width="1917" height="863" alt="Screenshot 2026-03-30 223125" src="https://github.com/user-attachments/assets/338de82f-08d5-4631-a418-79e73541cf5e" />
 <img width="1918" height="876" alt="Screenshot 2026-03-30 223158" src="https://github.com/user-attachments/assets/d8aaa916-85a8-44b9-9837-0775c978d397" />
+<img width="1898" height="1007" alt="image" src="https://github.com/user-attachments/assets/578517c2-8881-4a6c-99cf-33a9264ae5b0" />
 
 🏗️ Architecture
 Source: Data fetched dynamically from GitHub using JSON configuration
