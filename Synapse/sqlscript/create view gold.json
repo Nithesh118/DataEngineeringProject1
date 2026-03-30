@@ -1,0 +1,17 @@
+{
+	"name": "create view gold",
+	"properties": {
+		"content": {
+			"query": "-- create view calendar\nCREATE view gold.calendar \nas \nSELECT * from \nOPENROWSET(\n    BULK 'https://deprojectdatalakenith1.dfs.core.windows.net/silver/AdventureWorks_Calendar/',\n    FORMAT = 'PARQUET'\n) as q1\n\n-- create view customers\nCREATE view gold.customers \nas \nSELECT * from \nOPENROWSET(\n    BULK 'https://deprojectdatalakenith1.dfs.core.windows.net/silver/AdventureWorks_Customers/',\n    FORMAT = 'PARQUET'\n) as q1\n\n-- create view products\nCREATE view gold.products \nas \nSELECT * from \nOPENROWSET(\n    BULK 'https://deprojectdatalakenith1.dfs.core.windows.net/silver/AdventureWorks_Products/',\n    FORMAT = 'PARQUET'\n) as q1\n\n-- create view returns\nCREATE view gold.retur\nas \nSELECT * from \nOPENROWSET(\n    BULK 'https://deprojectdatalakenith1.dfs.core.windows.net/silver/AdventureWorks_Returns/',\n    FORMAT = 'PARQUET'\n) as q1\n\n-- create view sales\nCREATE view gold.sales \nas \nSELECT * from \nOPENROWSET(\n    BULK 'https://deprojectdatalakenith1.dfs.core.windows.net/silver/Product_Sales/',\n    FORMAT = 'PARQUET'\n) as q1\n\n-- create view subcat\nCREATE view gold.subcat \nas \nSELECT * from \nOPENROWSET(\n    BULK 'https://deprojectdatalakenith1.dfs.core.windows.net/silver/Product_Subcategories/',\n    FORMAT = 'PARQUET'\n) as q1\n\n-- create view territories\nCREATE view gold.territories \nas \nSELECT * from \nOPENROWSET(\n    BULK 'https://deprojectdatalakenith1.dfs.core.windows.net/silver/AdventureWorks_Territories/',\n    FORMAT = 'PARQUET'\n) as q1\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "dedatabase",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

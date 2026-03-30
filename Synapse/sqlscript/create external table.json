@@ -1,0 +1,17 @@
+{
+	"name": "create external table",
+	"properties": {
+		"content": {
+			"query": "CREATE DATABASE SCOPED CREDENTIAL cred_nith\nWITH IDENTITY ='Managed Identity'\n\nCREATE EXTERNAL DATA SOURCE source_silver\nwith (\n    LOCATION = 'https://deprojectdatalakenith1.dfs.core.windows.net/silver',\n    CREDENTIAL = cred_nith\n)\n\nCREATE EXTERNAL DATA SOURCE source_gold\nwith (\n    LOCATION = 'https://deprojectdatalakenith1.dfs.core.windows.net/gold',\n    CREDENTIAL = cred_nith\n)\n\nCREATE EXTERNAL FILE FORMAT parquet_format\nwith (\n    FORMAT_TYPE = PARQUET,\n    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'\n)\n\n\nCREATE EXTERNAL TABLE gold.extsales\nWITH(\n    LOCATION = 'extsales',\n    DATA_SOURCE = source_gold,\n    FILE_FORMAT = parquet_format\n)\nas \nSELECT * from gold.sales",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "dedatabase",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
